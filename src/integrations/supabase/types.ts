@@ -14,7 +14,155 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      campaigns: {
+        Row: {
+          audience: string
+          budget: number
+          clicks: number
+          created_at: string
+          delivery_type: string
+          id: string
+          impressions: number
+          members_gained: number
+          name: string
+          niche: string
+          server_id: string | null
+          spent: number
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          audience?: string
+          budget?: number
+          clicks?: number
+          created_at?: string
+          delivery_type?: string
+          id?: string
+          impressions?: number
+          members_gained?: number
+          name: string
+          niche?: string
+          server_id?: string | null
+          spent?: number
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          audience?: string
+          budget?: number
+          clicks?: number
+          created_at?: string
+          delivery_type?: string
+          id?: string
+          impressions?: number
+          members_gained?: number
+          name?: string
+          niche?: string
+          server_id?: string | null
+          spent?: number
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "campaigns_server_id_fkey"
+            columns: ["server_id"]
+            isOneToOne: false
+            referencedRelation: "servers"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          balance: number
+          created_at: string
+          id: string
+          updated_at: string
+          username: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          balance?: number
+          created_at?: string
+          id: string
+          updated_at?: string
+          username: string
+        }
+        Update: {
+          avatar_url?: string | null
+          balance?: number
+          created_at?: string
+          id?: string
+          updated_at?: string
+          username?: string
+        }
+        Relationships: []
+      }
+      servers: {
+        Row: {
+          bot_active: boolean
+          created_at: string
+          icon: string
+          id: string
+          members: number
+          name: string
+          status: string
+          user_id: string
+        }
+        Insert: {
+          bot_active?: boolean
+          created_at?: string
+          icon?: string
+          id?: string
+          members?: number
+          name: string
+          status?: string
+          user_id: string
+        }
+        Update: {
+          bot_active?: boolean
+          created_at?: string
+          icon?: string
+          id?: string
+          members?: number
+          name?: string
+          status?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      wallet_transactions: {
+        Row: {
+          amount: number
+          created_at: string
+          description: string
+          id: string
+          type: string
+          user_id: string
+        }
+        Insert: {
+          amount: number
+          created_at?: string
+          description: string
+          id?: string
+          type: string
+          user_id: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          description?: string
+          id?: string
+          type?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
