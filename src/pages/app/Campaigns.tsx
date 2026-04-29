@@ -9,7 +9,7 @@ import {
   Loader2, Ban, MailX, UserX, Pencil, Megaphone,
 } from "lucide-react";
 import { toast } from "sonner";
-import { findNiche } from "@/lib/ads";
+import { findNiche, formatBRL } from "@/lib/ads";
 
 type Campaign = {
   id: string; name: string; title: string; message: string; image_url: string | null;
