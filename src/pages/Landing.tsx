@@ -410,15 +410,18 @@ const Landing = () => {
               </div>
 
               <div className="grid gap-3 md:grid-cols-3">
-                {outcomes.map((item) => (
-                  <article key={item.title} className="rounded-md border border-border bg-card p-5">
-                    <div className="mb-5 grid h-11 w-11 place-items-center rounded-md bg-primary text-primary-foreground">
-                      <item.icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="text-lg font-black leading-tight">{item.title}</h3>
-                    <p className="mt-3 text-sm font-semibold leading-relaxed text-muted-foreground">{item.text}</p>
-                  </article>
-                ))}
+                {outcomes.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <article key={item.title} className="rounded-md border border-border bg-card p-5">
+                      <div className="mb-5 grid h-11 w-11 place-items-center rounded-md bg-primary text-primary-foreground">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <h3 className="text-lg font-black leading-tight">{item.title}</h3>
+                      <p className="mt-3 text-sm font-semibold leading-relaxed text-muted-foreground">{item.text}</p>
+                    </article>
+                  );
+                })}
               </div>
             </div>
           </div>
