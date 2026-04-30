@@ -293,7 +293,7 @@ const Landing = () => {
                 n: "04",
                 icon: Zap,
                 t: "Paga via PIX",
-                d: "R$ 0,05 por DM. Compra a partir de R$ 50 (1.000 DMs). PIX cai, créditos entram na hora.",
+                d: "R$ 0,05 por DM. Compra a partir de R$ 25 (500 DMs). PIX cai, créditos entram na hora.",
               },
               {
                 n: "05",
