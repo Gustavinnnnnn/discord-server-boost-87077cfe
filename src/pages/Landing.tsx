@@ -337,7 +337,7 @@ const Landing = () => {
               <span className="text-gradient">R$ 0,05</span> por DM. Sem mensalidade.
             </h2>
             <p className="mt-5 text-muted-foreground text-base md:text-lg">
-              Compra créditos, usa quando quiser. Mínimo R$ 50 (1.000 DMs). Pode escolher qualquer valor acima disso.
+              Compra créditos, usa quando quiser. Mínimo R$ 25 (500 DMs). Pode escolher qualquer valor acima disso.
             </p>
           </div>
 
