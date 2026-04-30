@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import { HelpCircle, X } from "lucide-react";
+import { X } from "lucide-react";
 import { DiscordIcon } from "@/components/DiscordIcon";
+import supportMascot from "@/assets/support-mascot.png";
 
 const DISCORD_URL = "https://discord.gg/YBWcN4EddG";
 const WHATSAPP_URL =
